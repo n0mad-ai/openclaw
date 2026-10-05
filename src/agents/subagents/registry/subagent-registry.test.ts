@@ -663,7 +663,6 @@ describe("subagent registry seam flow", () => {
     });
     mocks.entries = {
       "agent:main:subagent:child": createSessionEntry({
-        status: "running",
         lifecycleRunId: "newer-run",
         abortedLastRun: false,
       }),
@@ -1104,7 +1103,7 @@ describe("subagent registry seam flow", () => {
     mocks.entries = {
       "agent:main:subagent:child": createSessionEntry({
         updatedAt: startedAt,
-        status: "running",
+        status: undefined,
       }),
     };
     const settleRootWork = observeRootWork();
@@ -1266,7 +1265,7 @@ describe("subagent registry seam flow", () => {
         mocks.entries = {
           "agent:main:subagent:child": createSessionEntry({
             updatedAt: createdAt,
-            status: "running",
+            status: undefined,
           }),
         };
       }
@@ -1347,7 +1346,7 @@ describe("subagent registry seam flow", () => {
     });
     mocks.entries = {
       "agent:main:subagent:child": createSessionEntry({
-        status: "running",
+        status: undefined,
         updatedAt: createdAt + 61_000,
         startedAt: observedStartedAt,
       }),
@@ -2158,7 +2157,7 @@ describe("subagent registry seam flow", () => {
     mocks.entries = {
       "agent:main:subagent:child": createSessionEntry({
         updatedAt: Date.now(),
-        status: "running",
+        status: "interrupted",
         abortedLastRun: true,
       }),
     };
