@@ -692,6 +692,7 @@ export const databaseWorkerCoreTestFiles = [
   "src/media/store.cleanup.test.ts",
   "src/media/generated-html-provenance.test.ts",
   "src/media/web-media.test.ts",
+  "src/state/agent-database-admission.test.ts",
   "src/state/agent-provenance.test.ts",
   "src/state/user-profiles.avatar-worker.test.ts",
   "src/state/user-channel-identities.test.ts",
